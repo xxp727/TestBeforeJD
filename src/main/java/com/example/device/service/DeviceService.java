@@ -1,37 +1,17 @@
 package com.example.device.service;
 
 import com.example.device.domain.Device;
-import com.example.device.mapper.DeviceMapper;
-import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
-@Service
-public class DeviceService {
+public interface DeviceService {
+    Device getDeviceById(Integer id) throws Exception;
 
-    @Resource
-    DeviceMapper deviceMapper;
+    List<Device> getDeviceList() throws Exception;;
 
-    Device getDeviceById(Integer id){
-        return deviceMapper.getDeviceById(id);
-    }
+    Integer updateDeviceById(Integer id,String name,String type,String description,String serial) throws Exception;
 
-    List<Device> getDeviceList(){
-        return deviceMapper.getDeviceList();
-    }
+    Integer addDevice(String name,String type,String description,String serial) throws Exception;
 
-    Integer updateDeviceById(Integer id,String name,String type,String description,String serial){
-        Device device = new Device(id,name,type,description,serial);
-        return deviceMapper.updateDeviceById(device);
-    }
-
-    Integer addDevice(String name,String type,String description,String serial){
-        Device device = new Device(null,name,type,description,serial);
-        return deviceMapper.addDevice(device);
-    }
-
-    Integer deleteDeviceById(Integer id){
-        return deviceMapper.deleteDeviceById(id);
-    }
+    Integer deleteDeviceById(Integer id) throws Exception;
 }
