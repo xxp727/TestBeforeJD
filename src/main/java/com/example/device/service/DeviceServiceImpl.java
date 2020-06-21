@@ -20,6 +20,10 @@ public class DeviceServiceImpl implements DeviceService{
     public List<Device> getDeviceList(){
         return deviceMapper.getDeviceList();
     }
+    
+    public List<Device> getDeviceByName(String keyword) throws Exception {
+        return deviceMapper.getDeviceListByName(keyword);
+    }
 
     public Integer updateDeviceById(Integer id,String name,String type,String description,String serial){
         Device device = new Device(id,name,type,description,serial);

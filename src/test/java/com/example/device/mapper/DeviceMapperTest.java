@@ -53,4 +53,9 @@ class DeviceMapperTest {
         deviceMapper.deleteDeviceById(1);
         System.out.println(deviceMapper.getDeviceList());
     }
+
+    @Test
+    void getDeviceListByName() {
+        System.out.println(deviceMapper.getDeviceListByName("new"));
+    }
 }

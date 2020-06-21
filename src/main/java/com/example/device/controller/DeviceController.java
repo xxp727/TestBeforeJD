@@ -26,6 +26,17 @@ public class DeviceController {
 
     }
 
+    @RequestMapping(value = "/device/name/{keyword}",method = RequestMethod.GET)
+    public RespBean getDeviceByName(@PathVariable String keyword){
+        try{
+            List<Device> deviceList = deviceService.getDeviceByName(keyword);
+            return new RespBean(200,"成功",deviceList);
+        }
+        catch (Exception e){
+            return new RespBean(500,e.getMessage(),null);
+        }
+    }
+
     @RequestMapping(value = "/device/{id}",method = RequestMethod.GET)
     public RespBean getDeviceById(@PathVariable Integer id){
         try{
