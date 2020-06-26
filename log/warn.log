@@ -1,0 +1,2 @@
+21:13:57.846 [main] WARN  com.example.device.service.DeviceServiceImpl - This is a warn message
+21:13:57.846 [main] ERROR com.example.device.service.DeviceServiceImpl - This is an error message

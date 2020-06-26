@@ -1,6 +1,7 @@
 package com.example.device.mapper;
 
 import com.example.device.domain.Device;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -8,6 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @RunWith(SpringRunner.class)
@@ -20,42 +23,51 @@ class DeviceMapperTest {
 
     @Test
     void getDeviceById() {
-        System.out.println(deviceMapper.getDeviceById(1));
+        Device actualDevice = deviceMapper.getDeviceById(1);
+
+//        Assert.assertEquals(expectDevice,actualDevice);
+        System.out.println(actualDevice);
     }
 
     @Test
     void getDeviceList() {
-        System.out.println(deviceMapper.getDeviceList());
+        List<Device> devices = deviceMapper.getDeviceList();
+
+//        Assert.assertEquals(devices,deviceMapper.getDeviceList());
+        System.out.println(devices);
     }
 
     @Test
     void updateDeviceById() {
-        Device device = new Device(1,"name","type","description","serial");
-        Integer i = deviceMapper.updateDeviceById(device);
+        Device device = new Device(1,"newName1","newType1","newDescription1","newSerial1");
+        int i = deviceMapper.updateDeviceById(device);
+
+//        Assert.assertEquals(device,deviceMapper.getDeviceById(1));
         System.out.println(i);
-
-        device.setId(1000000);
-        System.out.println(deviceMapper.updateDeviceById(device));
-
-        System.out.println(deviceMapper.getDeviceList());
     }
 
     @Test
     void addDevice() {
-        Device device = new Device(null,"name","type","description","serial");
+        Device device = new Device(3,"Name3","Type3","Description3","Serial3");
         Integer i = deviceMapper.addDevice(device);
+
+//        Assert.assertEquals(device,deviceMapper.getDeviceById(3));
         System.out.println(i);
-        System.out.println(deviceMapper.getDeviceList());
     }
 
     @Test
     void deleteDeviceById() {
-        deviceMapper.deleteDeviceById(1);
-        System.out.println(deviceMapper.getDeviceList());
+        Integer i = deviceMapper.deleteDeviceById(1);
+
+//        Assert.assertEquals(1,deviceMapper.getDeviceList().size());
+        System.out.println(i);
     }
 
     @Test
     void getDeviceListByName() {
-        System.out.println(deviceMapper.getDeviceListByName("new"));
+        List<Device> devices = deviceMapper.getDeviceListByName("Name1");
+
+//        Assert.assertEquals(devices,deviceMapper.getDeviceListByName("Name1"));
+        System.out.println(devices);
     }
 }

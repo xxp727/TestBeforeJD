@@ -1,11 +1,13 @@
 package com.example.device.domain;
 
-public class RespBean {
+public class RespBean<T> {
     Integer code;
     String msg;
-    Object object;
+    T object;
 
-    public RespBean(Integer code, String msg, Object object) {
+    public RespBean(){}
+
+    public RespBean(Integer code, String msg, T object) {
         this.code = code;
         this.msg = msg;
         this.object = object;
@@ -27,11 +29,11 @@ public class RespBean {
         this.msg = msg;
     }
 
-    public Object getObject() {
+    public T getObject() {
         return object;
     }
 
-    public void setObject(Object object) {
+    public void setObject(T object) {
         this.object = object;
     }
 }

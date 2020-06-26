@@ -69,4 +69,29 @@ public class Device {
                 ", serial='" + serial + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Device device = (Device) o;
+
+        if (getId() != null ? !getId().equals(device.getId()) : device.getId() != null) return false;
+        if (getName() != null ? !getName().equals(device.getName()) : device.getName() != null) return false;
+        if (getType() != null ? !getType().equals(device.getType()) : device.getType() != null) return false;
+        if (getDescription() != null ? !getDescription().equals(device.getDescription()) : device.getDescription() != null)
+            return false;
+        return getSerial() != null ? getSerial().equals(device.getSerial()) : device.getSerial() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId() != null ? getId().hashCode() : 0;
+        result = 31 * result + (getName() != null ? getName().hashCode() : 0);
+        result = 31 * result + (getType() != null ? getType().hashCode() : 0);
+        result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
+        result = 31 * result + (getSerial() != null ? getSerial().hashCode() : 0);
+        return result;
+    }
 }

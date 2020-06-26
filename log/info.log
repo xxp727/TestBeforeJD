@@ -1,0 +1,11 @@
+21:13:52.318 [main] INFO  com.example.device.controller.DeviceControllerTest - Starting DeviceControllerTest on PC-20190503FMKE with PID 6028 (started by Administrator in C:\Users\Administrator\Desktop\device\TestBeforeJD)
+21:13:52.338 [main] INFO  com.example.device.controller.DeviceControllerTest - No active profile set, falling back to default profiles: default
+21:13:54.872 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:13:55.390 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:13:57.264 [main] INFO  com.example.device.controller.DeviceControllerTest - Started DeviceControllerTest in 6.278 seconds (JVM running for 9.093)
+21:13:57.845 [main] INFO  com.example.device.service.DeviceServiceImpl - hello
+21:13:57.845 [main] INFO  com.example.device.service.DeviceServiceImpl - This is an info message
+21:13:57.846 [main] WARN  com.example.device.service.DeviceServiceImpl - This is a warn message
+21:13:57.846 [main] ERROR com.example.device.service.DeviceServiceImpl - This is an error message
+21:13:58.072 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:13:58.078 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
