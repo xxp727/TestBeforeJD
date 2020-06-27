@@ -5,6 +5,7 @@ import com.example.device.mapper.DeviceMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -30,22 +31,23 @@ public class DeviceServiceImpl implements DeviceService{
     }
 
     @Cacheable
-    public List<Device> getDeviceByName(String keyword) throws Exception {
+    public List<Device> getDeviceByName(String keyword) {
         return deviceMapper.getDeviceListByName(keyword);
     }
 
-    @Cacheable
+    @CacheEvict(allEntries = true)
     public Integer updateDeviceById(Integer id,String name,String type,String description,String serial){
         Device device = new Device(id,name,type,description,serial);
         return deviceMapper.updateDeviceById(device);
     }
 
-    @Cacheable
+    @CacheEvict(allEntries = true)
     public Integer addDevice(String name,String type,String description,String serial){
         Device device = new Device(null,name,type,description,serial);
         return deviceMapper.addDevice(device);
     }
 
+    @CacheEvict(allEntries = true)
     public Integer deleteDeviceById(Integer id){
         return deviceMapper.deleteDeviceById(id);
     }
