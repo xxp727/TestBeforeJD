@@ -1,5 +1,7 @@
 package com.example.device.domain;
 
+import java.io.Serializable;
+
 public class RespBean<T> {
     Integer code;
     String msg;

@@ -1,11 +1,13 @@
-21:13:52.318 [main] INFO  com.example.device.controller.DeviceControllerTest - Starting DeviceControllerTest on PC-20190503FMKE with PID 6028 (started by Administrator in C:\Users\Administrator\Desktop\device\TestBeforeJD)
-21:13:52.338 [main] INFO  com.example.device.controller.DeviceControllerTest - No active profile set, falling back to default profiles: default
-21:13:54.872 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-21:13:55.390 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-21:13:57.264 [main] INFO  com.example.device.controller.DeviceControllerTest - Started DeviceControllerTest in 6.278 seconds (JVM running for 9.093)
-21:13:57.845 [main] INFO  com.example.device.service.DeviceServiceImpl - hello
-21:13:57.845 [main] INFO  com.example.device.service.DeviceServiceImpl - This is an info message
-21:13:57.846 [main] WARN  com.example.device.service.DeviceServiceImpl - This is a warn message
-21:13:57.846 [main] ERROR com.example.device.service.DeviceServiceImpl - This is an error message
-21:13:58.072 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-21:13:58.078 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:06:43.019 [main] INFO  com.example.device.integration.IntegrateTest - Starting IntegrateTest on PC-20190503FMKE with PID 5272 (started by Administrator in C:\Users\Administrator\Desktop\device\TestBeforeJD)
+20:06:43.045 [main] INFO  com.example.device.integration.IntegrateTest - No active profile set, falling back to default profiles: default
+20:06:46.813 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+20:06:46.814 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+20:06:46.814 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+20:06:47.022 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:06:47.189 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:06:47.626 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:06:50.611 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+20:06:50.695 [main] INFO  com.example.device.integration.IntegrateTest - Started IntegrateTest in 8.821 seconds (JVM running for 11.869)
+20:06:51.263 [http-nio-auto-1-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:06:53.946 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:06:53.959 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,6 +1,8 @@
 package com.example.device.domain;
 
-public class Device {
+import java.io.Serializable;
+
+public class Device implements Serializable {
     Integer id;
     String name;
     String type;
