@@ -6,16 +6,16 @@
 
 重要的功能点：  
 
-    + mybatis
-    + mysql
-    + 接口
-        + 获取设备列表 Get /device
-        + 获取设备 Get /device
-        + 修改设备 Update /device/{id}
-        + 创建设备 Post /device
-        + 删除设备 Delete /device/{id}
-        + 搜索设备 Get /device/name/{device_name}
-    + log4j2记录日志到本地
-    + TestRestTemplate和H2DataBase构建集成测试
-    + Mockito构建单元测试
-    + Redis缓存查询，失效时间15分钟，当update时缓存失效
++ mybatis
++ mysql
++ 接口
+  + 获取设备列表 get /device
+  + 获取设备 get /device
+  + 修改设备 update /device/{id}
+  + 创建设备 post /device
+  + 删除设备 delete /device/{id}
+  + 搜索设备 get /device/name/{device_name}
++ log4j2记录日志到本地
++ TestRestTemplate和H2DataBase构建集成测试
++ Mockito构建单元测试
++ Redis缓存查询，失效时间15分钟，当update时缓存失效
